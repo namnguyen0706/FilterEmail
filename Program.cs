@@ -15,7 +15,7 @@ namespace FilterEmail
                 string line ="";
                 Regex pattern1 = new Regex(@"(.+)(@+)(gmail+)(\.+)(com)");
                 // doc va ghi file
-                StreamReader sr = new StreamReader("test.txt");
+                StreamReader sr = new StreamReader(args[0]);
                 StreamWriter sw = new StreamWriter("mail.txt");
                 
                 List<string> result = new List<string>();

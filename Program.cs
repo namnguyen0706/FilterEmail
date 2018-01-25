@@ -24,12 +24,16 @@ namespace FilterEmail
                     result.Add(line);
                     line = sr.ReadLine();
                 }
+                
                 foreach (var item in result)
                 {
                     Match match = pattern1.Match(item);
                     if(match.Success)
                     sw.WriteLine(match);
                 }
+                sr.Close();
+                sw.Close();
+                //sw.close();
                 }
                 catch (Exception ex)
                 {
